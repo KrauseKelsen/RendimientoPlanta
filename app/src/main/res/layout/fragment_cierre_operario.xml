@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentacion.ui.fragment.CierreOperarioFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ProgressBar
+                        android:id="@+id/progress_horizontal"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:indeterminate="true"
+                        android:progressBackgroundTint="@color/primary"
+                        android:secondaryProgressTint="@color/primary" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lb_operarioEnLinea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/font_noto_serif_regular_300"
+                        android:text="Operario en línea"
+                        android:textColor="@color/text_color"
+                        android:textSize="18sp" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/spinnerOperarioEnLinea"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="10dp"
+                        app:hintText="Seleccione un operario en línea" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_card_hora_inicio"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/operarioEnLinea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="Operario en línea"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tallosAsignados"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="Tallos asignados: 0"
+                                android:textColor="#90FFFFFF"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tallosAlCierre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="Tallos al cierre: 0"
+                                android:textColor="#90FFFFFF"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_yard_white" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tallosPorHora"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="0 tallos por hora"
+                                android:textColor="#90FFFFFF"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/efectividad"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="Efectividad: 00 h 00 min"
+                                android:textColor="#90FFFFFF"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/porcentaje_rendimiento"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="0%"
+                                android:layout_alignParentEnd="true"
+                                android:textColor="@color/white"
+                                android:textSize="32sp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/teclado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/divider_view" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lb_tallos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:enabled="false"
+                            android:fontFamily="@font/font_noto_serif_regular_300"
+                            android:text="Cantidad de tallos"
+                            android:textAlignment="center"
+                            android:textColor="@color/primary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/labelCodigo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:fontFamily="@font/font_noto_serif_regular_300"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/primary"
+                            android:textSize="32dp"/>
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp">
+
+                            <Button
+                                android:id="@+id/btn7"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="7"
+                                android:textColor="@color/primary"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btn8"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="8"
+                                android:textColor="@color/primary"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btn9"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="9"
+                                android:textColor="@color/primary"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp">
+
+                            <Button
+                                android:id="@+id/btn4"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="4"
+                                android:textColor="@color/primary"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btn5"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="5"
+                                android:textColor="@color/primary"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btn6"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="6"
+                                android:textColor="@color/primary"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp">
+
+                            <Button
+                                android:id="@+id/btn1"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="1"
+                                android:textColor="@color/primary"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btn2"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="2"
+                                android:textColor="@color/primary"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btn3"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="3"
+                                android:textColor="@color/primary"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp">
+
+                            <ImageButton
+                                android:id="@+id/btnAdd"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/primary"
+                                android:src="@drawable/ic_check_fact" />
+
+                            <Button
+                                android:id="@+id/btn0"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="@font/font_noto_serif_regular_300"
+                                android:text="0"
+                                android:textColor="@color/primary"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/btnDel"
+                                android:layout_width="30pt"
+                                android:layout_height="30pt"
+                                android:layout_marginEnd="4pt"
+                                android:layout_marginBottom="4pt"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/primary"
+                                android:src="@drawable/ic_backspace" />
+
+                        </TableRow>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutFloatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/btnKey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/bg_gradiend_buttom_radius"
+                        android:src="@drawable/ic_keyboard"
+                        app:backgroundTint="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,62 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/drawable/bg_card_hora_fin.xml" value="0.19166666666666668" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/drawable/bg_card_hora_inicio.xml" value="0.19166666666666668" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/drawable/border_gray.xml" value="0.14814814814814814" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/drawable/ic_config.xml" value="0.14814814814814814" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/bottom_sheet_asignar_producto.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/bottom_sheet_message.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/bottom_sheet_motivo.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/bottom_sheet_operarios.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/bottom_sheet_usuarios.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/card_menu_chart.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/card_menu_cierre_linea.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/card_menu_row.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/custom_spinner_list_item.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/dialog_cierre.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/dialog_config.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/dialog_message.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_asignar_producto.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_cierre.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_cierre_linea.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_cierre_linea_administrador.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_cierre_operario.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_cierre_operario_load.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_desasignar_producto.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_fincas.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_jornada.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_load.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_login.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_logout.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_opciones.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_operario.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_procesos.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_producto.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_recesos.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_registrar_operario.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_registrar_usuario.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_reporte.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_sacar_linea.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_start.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/fragment_tiempo_muerto.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/row_fincas.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/row_motivo.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/row_operarios.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/row_operarios_en_linea.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/row_productos_asignados.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/row_usuarios.xml" value="0.3333333333333333" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/layout/toolbar.xml" value="0.17552083333333332" />
+        <entry key="..\:/repo/Android/Kotlin/rendimiento-planta/app/src/main/res/menu/bottom_navigation.xml" value="0.17552083333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

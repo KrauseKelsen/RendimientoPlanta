@@ -1,0 +1,113 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    //id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'
+    //navigation plugin
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.example.rendimientoplanta"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true // resuelve error Cannot fit requested classes in a single dex file (# methods: 77563 > 65536)
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true // para soportar imagenes
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    dataBinding{
+        enabled true
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.4'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.room:room-runtime:2.2.5'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.android.material:material:1.3.0' //Navigation View para Navigation Drawer y otras cosas
+    // Navigation Components
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.4'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0' //mostrar una imagen circular en el cardview
+    implementation 'com.android.support:multidex:1.0.3' // resuelve error Cannot fit requested classes in a single dex file (# methods: 93587 > 65536)
+    implementation "androidx.recyclerview:recyclerview:1.1.0" //Recycle View
+    implementation "androidx.cardview:cardview:1.0.0" //Card View
+    implementation 'com.github.bumptech.glide:glide:4.11.0' //Permite cargar imagenes desde una URL
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0' //Permite cargar imagenes desde una URL
+    implementation 'com.google.firebase:firebase-firestore:22.1.1' // cloud firestore
+    implementation platform('com.google.firebase:firebase-bom:28.0.1') // firebase
+    implementation 'com.google.firebase:firebase-analytics-ktx'// firebase
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0" //Para ViewModel (MVVM)
+
+    implementation "com.facebook.shimmer:shimmer:0.5.0" //Librería de Facebook para efecto de carga
+
+    implementation 'com.google.firebase:firebase-storage-ktx:19.2.1' //firebase storage
+    implementation 'com.google.firebase:firebase-storage:19.2.1' //firebase storage
+    implementation 'com.google.firebase:firebase-auth:20.0.3' // firebase authetication
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+
+    //Retrofit y convertidor de json
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.0.3' // date sin api 26
+
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1' // spinner searchable
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2' // grafico pastel finisimo
+
+    implementation 'com.google.android.material:material:1.2.0-alpha03'
+
+    implementation 'com.android.support:design:30.0.0-alpha1'//estilos para text view
+
+    implementation 'com.nex3z:notification-badge:1.0.4'//libreria para notificaciones
+
+    // convert object to HashMap para Firebase
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.10.1'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.10.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.1'
+
+    implementation 'it.xabaras.android:recyclerview-swipedecorator:1.2.3'
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+}

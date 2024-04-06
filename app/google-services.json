@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "407316858602",
+    "project_id": "rendimiento-planta",
+    "storage_bucket": "rendimiento-planta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407316858602:android:99c5d42aa5a24c1b1cb993",
+        "android_client_info": {
+          "package_name": "com.example.rendimientoplanta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407316858602-qs7itjv6rvnajc0oirf05sej003jkj25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDktwIC92u4_g82A-uw0KeM8c57fgtAd_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407316858602-qs7itjv6rvnajc0oirf05sej003jkj25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

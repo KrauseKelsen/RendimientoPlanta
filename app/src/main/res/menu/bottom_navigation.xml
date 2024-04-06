@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/procesosFragment"
+        android:icon="@drawable/ic_procesos"
+        android:title="Procesos"/>
+    <item
+        android:id="@+id/productoFragment"
+        android:icon="@drawable/ic_producto"
+        android:title="Producto"/>
+    <item
+        android:id="@+id/cierreFragment"
+        android:icon="@drawable/ic_cierre"
+        android:title="Cierre"/>
+
+    <item
+        android:id="@+id/reporteFragment"
+        android:icon="@drawable/ic_reporte"
+        android:title="Reportes"/>
+
+    <item
+        android:id="@+id/opcionesFragment"
+        android:icon="@drawable/ic_options"
+        android:title="Opciones"/>
+</menu>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bar"
+    app:startDestination="@id/loadFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_procesosFragment"
+            app:destination="@id/procesosFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+        <action
+            android:id="@+id/action_startFragment_to_productoFragment"
+            app:destination="@id/productoFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_reporteFragment"
+            app:destination="@id/reporteFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_cierreFragment"
+            app:destination="@id/cierreFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_opcionesFragment"
+            app:destination="@id/opcionesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_procesosFragment"
+            app:destination="@id/procesosFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/messageBottomSheet"
+        android:name="com.example.rendimientoplanta.presentacion.ui.bottomsheet.MessageBottomSheet"
+        android:label="MessageBottomSheet">
+        <argument
+            android:name="message"
+            android:defaultValue="sin valor"
+            app:argType="string" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/procesosFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.ProcesosFragment"
+        android:label="fragment_procesos"
+        tools:layout="@layout/fragment_procesos">
+        <action
+            android:id="@+id/action_procesosFragment_to_operarioFragment"
+            app:destination="@id/operarioFragment" />
+        <action
+            android:id="@+id/action_procesosFragment_to_jornadaFragment"
+            app:destination="@id/jornadaFragment" />
+        <action
+            android:id="@+id/action_procesosFragment_to_recesosFragment"
+            app:destination="@id/recesosFragment" />
+        <action
+            android:id="@+id/action_procesosFragment_to_tiempoMuertoFragment"
+            app:destination="@id/tiempoMuertoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cierreFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.CierreFragment"
+        android:label="fragment_cierre"
+        tools:layout="@layout/fragment_cierre">
+        <action
+            android:id="@+id/action_cierreFragment_to_cierreLineaFragment"
+            app:destination="@id/cierreLineaFragment" />
+        <action
+            android:id="@+id/action_cierreFragment_to_cierreOperarioFragment"
+            app:destination="@id/cierreOperarioFragment" />
+        <action
+            android:id="@+id/action_cierreFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+        <action
+            android:id="@+id/action_cierreFragment_to_cierreLineaAdmistradorFragment"
+            app:destination="@id/cierreLineaAdmistradorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reporteFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.ReporteFragment"
+        android:label="fragment_reporte"
+        tools:layout="@layout/fragment_reporte" >
+        <action
+            android:id="@+id/action_reporteFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/productoFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.ProductoFragment"
+        android:label="fragment_producto"
+        tools:layout="@layout/fragment_producto">
+        <action
+            android:id="@+id/action_productoFragment_to_asignarProductoFragment"
+            app:destination="@id/asignarProductoFragment" />
+        <action
+            android:id="@+id/action_productoFragment_to_desasignarProductoFragment"
+            app:destination="@id/desasignarProductoFragment" />
+        <action
+            android:id="@+id/action_productoFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/operarioFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.OperarioFragment"
+        android:label="fragment_operario"
+        tools:layout="@layout/fragment_operario">
+        <action
+            android:id="@+id/action_operarioFragment_to_procesosFragment"
+            app:destination="@id/procesosFragment"
+            app:popUpTo="@id/procesosFragment" />
+        <action
+            android:id="@+id/action_operarioFragment_to_sacarLineaFragment"
+            app:destination="@id/sacarLineaFragment"
+            app:popUpTo="@id/operarioFragment" />
+        <action
+            android:id="@+id/action_operarioFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/jornadaFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.JornadaFragment"
+        android:label="fragment_jornada"
+        tools:layout="@layout/fragment_jornada">
+        <action
+            android:id="@+id/action_jornadaFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/recesosFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.RecesosFragment"
+        android:label="fragment_recesos"
+        tools:layout="@layout/fragment_recesos">
+        <action
+            android:id="@+id/action_recesosFragment_to_bottomSheetMotivos"
+            app:destination="@id/bottomSheetMotivos" />
+        <action
+            android:id="@+id/action_recesosFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetMotivos"
+        android:name="com.example.rendimientoplanta.presentacion.ui.bottomsheet.BottomSheetMotivos"
+        android:label="BottomSheetMotivos">
+        <action
+            android:id="@+id/action_bottomSheetMotivos_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </dialog>
+    <fragment
+        android:id="@+id/asignarProductoFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.AsignarProductoFragment"
+        android:label="fragment_asignar_producto"
+        tools:layout="@layout/fragment_asignar_producto">
+        <action
+            android:id="@+id/action_asignarProductoFragment_to_bottomSheetAsignarProducto"
+            app:destination="@id/bottomSheetAsignarProducto" />
+        <action
+            android:id="@+id/action_asignarProductoFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+        <action
+            android:id="@+id/action_asignarProductoFragment_to_productoFragment"
+            app:destination="@id/productoFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetAsignarProducto"
+        android:name="com.example.rendimientoplanta.presentacion.ui.bottomsheet.BottomSheetAsignarProducto"
+        android:label="BottomSheetAsignarProducto">
+
+        <argument
+            android:name="tallosAsignados"
+            android:defaultValue="@null"
+            app:argType="com.example.rendimientoplanta.base.pojos.ArrayListTallosAsignados"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_bottomSheetAsignarProducto_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+        <action
+            android:id="@+id/action_bottomSheetAsignarProducto_to_asignarProductoFragment"
+            app:destination="@id/asignarProductoFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/desasignarProductoFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.DesasignarProductoFragment"
+        android:label="fragment_desasignar_producto"
+        tools:layout="@layout/fragment_desasignar_producto">
+        <action
+            android:id="@+id/action_desasignarProductoFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/cierreLineaFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.CierreLineaFragment"
+        android:label="fragment_cierre_linea"
+        tools:layout="@layout/fragment_cierre_linea">
+        <argument
+            android:name="cierresLinea"
+            android:defaultValue="@null"
+            app:argType="com.example.rendimientoplanta.base.pojos.ArrayListCierreLinea"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_cierreLineaFragment_to_cierreOperarioLoadFragment"
+            app:destination="@id/cierreOperarioLoadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cierreOperarioFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.CierreOperarioFragment"
+        android:label="fragment_cierre_operario"
+        tools:layout="@layout/fragment_cierre_operario">
+        <argument
+            android:name="cierreLinea"
+            android:defaultValue="@null"
+            app:argType="com.example.rendimientoplanta.base.pojos.CierreLinea"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_cierreOperarioFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sacarLineaFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.SacarLineaFragment"
+        android:label="fragment_sacar_linea"
+        tools:layout="@layout/fragment_sacar_linea">
+
+        <argument
+            android:name="operarioLinea"
+            android:defaultValue="@null"
+            app:argType="com.example.rendimientoplanta.base.pojos.OperarioLinea"
+            app:nullable="true" />
+
+        <argument
+            android:name="tallosAsignados"
+            android:defaultValue="@null"
+            app:argType="com.example.rendimientoplanta.base.pojos.ArrayListTallosAsignados"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_sacarLineaFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+        <action
+            android:id="@+id/action_sacarLineaFragment_to_operarioFragment"
+            app:destination="@id/operarioFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/logoutFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.LogoutFragment"
+        android:label="LogoutFragment">
+        <action
+            android:id="@+id/action_logoutFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.LoadFragment"
+        android:label="fragment_load"
+        tools:layout="@layout/fragment_load">
+        <action
+            android:id="@+id/action_loadFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.BaseFragment"
+        android:label="BaseFragment">
+        <action
+            android:id="@+id/action_baseFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/cierreLineaAdmistradorFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.CierreLineaAdministradorFragment"
+        android:label="CierreLineaAdmistradorFragment">
+        <argument
+            android:name="cierresLinea"
+            android:defaultValue="@null"
+            app:argType="com.example.rendimientoplanta.base.pojos.ArrayListCierreLinea"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_cierreLineaAdmistradorFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+        <action
+            android:id="@+id/action_cierreLineaAdmistradorFragment_to_cierreOperarioLoadFragment"
+            app:destination="@id/cierreOperarioLoadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tiempoMuertoFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.TiempoMuertoFragment"
+        android:label="fragment_tiempo_muerto"
+        tools:layout="@layout/fragment_tiempo_muerto">
+        <action
+            android:id="@+id/action_tiempoMuertoFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/cierreOperarioLoadFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.CierreOperarioLoadFragment"
+        android:label="CierreOperarioLoadFragment">
+    <argument
+        android:name="cierreLinea"
+        android:defaultValue="@null"
+        app:argType="com.example.rendimientoplanta.base.pojos.CierreLineaLoad"
+        app:nullable="true" />
+        <action
+            android:id="@+id/action_cierreOperarioLoadFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/opcionesFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.OpcionesFragment"
+        android:label="fragment_opciones"
+        tools:layout="@layout/fragment_opciones" >
+        <action
+            android:id="@+id/action_opcionesFragment_to_registroOperarioFragment"
+            app:destination="@id/registroOperarioFragment" />
+        <action
+            android:id="@+id/action_opcionesFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+        <action
+            android:id="@+id/action_opcionesFragment_to_fincaFragment"
+            app:destination="@id/fincaFragment" />
+        <action
+            android:id="@+id/action_opcionesFragment_to_registroUsuarioFragment"
+            app:destination="@id/registroUsuarioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroOperarioFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.RegistroOperarioFragment"
+        android:label="RegistroOperarioFragment" >
+        <action
+            android:id="@+id/action_registroOperarioFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+        <action
+            android:id="@+id/action_registroOperarioFragment_to_bottomSheetOperarios"
+            app:destination="@id/bottomSheetOperarios" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetOperarios"
+        android:name="com.example.rendimientoplanta.presentacion.ui.bottomsheet.BottomSheetOperarios"
+        android:label="BottomSheetOperarios" >
+        <argument
+            android:name="user"
+            android:defaultValue="@null"
+            app:argType="com.example.rendimientoplanta.base.pojos.User"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_bottomSheetOperarios_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </dialog>
+    <fragment
+        android:id="@+id/fincaFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.FincaFragment"
+        android:label="FincaFragment" >
+        <action
+            android:id="@+id/action_fincaFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroUsuarioFragment"
+        android:name="com.example.rendimientoplanta.presentacion.ui.fragment.RegistroUsuarioFragment"
+        android:label="RegistroUsuarioFragment" >
+        <action
+            android:id="@+id/action_registroUsuarioFragment_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+        <action
+            android:id="@+id/action_registroUsuarioFragment_to_bottomSheetUsuarios"
+            app:destination="@id/bottomSheetUsuarios" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetUsuarios"
+        android:name="com.example.rendimientoplanta.presentacion.ui.bottomsheet.BottomSheetUsuarios"
+        android:label="BottomSheetUsuarios" >
+        <argument
+            android:name="user"
+            android:defaultValue="@null"
+            app:argType="com.example.rendimientoplanta.base.pojos.User"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_bottomSheetUsuarios_to_messageBottomSheet"
+            app:destination="@id/messageBottomSheet" />
+    </dialog>
+
+
+</navigation>
